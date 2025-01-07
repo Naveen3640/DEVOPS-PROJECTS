@@ -1,0 +1,34 @@
+#!/bin/bash
+
+#####################################################
+#Author:Naveen kumar
+#Date:07/01/2025
+#This script shows the node health of this server
+#version:01
+#####################################################
+
+#Opening the file in debugging mode
+set -x
+
+#Forstopping the process if there is any error (also it is in pipe statement)
+set -e
+set -o pipefail
+
+#Node health-disk,memory,cpu,process
+
+#disk
+echo "Disk usage:"
+df -h
+
+#memory
+echo " memory available"
+free -m
+
+#CPU
+echo "No. of CPU"
+nproc
+
+#process 
+echo "Running process"
+
+ps -ef | grep "ubuntu" |awk '{print $2}'
