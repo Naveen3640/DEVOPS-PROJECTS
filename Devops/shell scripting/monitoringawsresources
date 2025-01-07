@@ -1,0 +1,25 @@
+#!/bin/bash
+#####################################################
+#Author:Naveen kumar
+#Date:07/01/2025
+#This script shows the monitoring of aws resources
+#version:01
+#####################################################
+#Script to monitor aws resorces:s3,ec2,lambda,iam 
+#creating moniter repository
+
+#Listing s3 buckets
+echo -e  "Listing s3 buckets:\n"
+aws s3 ls
+
+#Listing ec2 instances
+echo -e "Listing ec2 instances:\n"
+aws ec2 describe-instances
+
+#Listing  lambda functions
+echo -e "Listing lambda functions:\n"
+aws lambda list-functions
+
+#Listing iam users
+echo -e "Listing iam users:\n"
+aws iam list-users
